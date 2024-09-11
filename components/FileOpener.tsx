@@ -1,12 +1,23 @@
 "use client";
 
+"use client";
+
 import Image from "next/image";
 import { useEffect } from "react";
 import { Oval } from "react-loader-spinner";
+import { useRouter } from "next/navigation";
 import logo from "@/public/scnbl-icon.png";
 
 const FileOpener = ({ typeId, content }: { typeId: number; content: any }) => {
+  const router = useRouter(); // Initialize the router
+
   useEffect(() => {
+    if (!content || Object.keys(content).length === 0) {
+      // If content is missing or empty, redirect to 404
+      router.push("/404");
+      return;
+    }
+
     switch (typeId) {
       case 1: // open website url: content.url
         window.location.href = content.url; // Open the website URL
@@ -40,9 +51,10 @@ const FileOpener = ({ typeId, content }: { typeId: number; content: any }) => {
         break;
       default:
         console.error("Invalid typeId");
+        router.push("/404"); // Redirect to 404 if typeId is invalid
         break;
     }
-  }, [typeId, content]);
+  }, [typeId, content, router]); // Add router as a dependency
 
   return (
     <div className="flex flex-col items-center justify-center mt-20 gap-20">

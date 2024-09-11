@@ -11,14 +11,14 @@ export const getFileInfo = async (id: string) => {
     nOpQrStUvWxYz: {
       type: 2,
       content: {
-        file: "https://www.tec.gov.in/public/pdf/Studypaper/5G%20Core%20Network_Study%20Paper_v8.pdf", // Case 2: PDF file
-      },
+        file: "https://www.tec.gov.in/public/pdf/Studypaper/5G%20Core%20Network_Study%20Paper_v8.pdf", // Case 2: PDF file: should be an array
+      }, // If multiple pdfs: later (MVP)
     },
     qRsTuVwXyZaBc: {
       type: 3,
       content: {
         file: "https://twitter.com/Starlink?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", // Case 3: Social media link
-      },
+      }, // show all social links in one page
     },
     dEfGhIjKlMnOp: {
       type: 4,
@@ -31,7 +31,7 @@ export const getFileInfo = async (id: string) => {
       content: {
         image:
           "https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?cs=srgb&dl=pexels-pixabay-164634.jpg&fm=jpg", // Case 5: Image URL
-      },
+      }, // Show image on the top then show download/share buttons below
     },
     cDeFgHiJkLmNo: {
       type: 6,
