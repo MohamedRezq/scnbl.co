@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24 space-y-4">
       <h1 className="text-2xl font-bold">Redirect to Scannabl Landing Pages</h1>
 
-      <Link href="/aBcDeFgHiJkLm">
+      <Link href="/1.m0a021be">
         <p className="px-4 py-2 bg-blue-500 text-white rounded">
           Google (Case 1)
         </p>

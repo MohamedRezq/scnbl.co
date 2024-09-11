@@ -25,10 +25,10 @@ const Custom404 = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-50 text-center px-4">
       <Image src={logo} alt="Logo" width={120} className="mb-8" />
-      <h1 className="text-5xl font-bold text-[#686CFF] mb-4">
+      <h1 className="text-2xl font-bold text-[#686CFF] mb-4">
         Invalid QR Code
       </h1>
-      <p className="text-lg text-gray-600 mb-8">
+      <p className="text-md text-gray-600 mb-8">
         It looks like the QR code was not scanned properly or is invalid. Please
         try scanning again.
       </p>
